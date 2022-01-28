@@ -1,0 +1,28 @@
+ALLOW {
+    [org.osgi.service.condpermadmin.BundleLocationCondition "file:/C:/Users/Leejh/cloud-edi/work/package-security/apache-karaf-4.2.12/deploy/*"]
+    (org.osgi.framework.ServicePermission "com.inspien.pilot.api.*" "get")
+} "bundle2_1"
+
+ALLOW {
+    [org.osgi.service.condpermadmin.BundleLocationCondition "file:/C:/Users/Leejh/cloud-edi/work/package-security/apache-karaf-4.2.12/deploy/*"]
+    (org.osgi.framework.ServicePermission "com.inspien.pilot.api.*" "get")
+} "bundle1_2"
+
+ALLOW {
+    [org.osgi.service.condpermadmin.BundleLocationCondition "file:/C:/Users/Leejh/cloud-edi/work/package-security/apache-karaf-4.2.12/deploy/*"]
+    (org.osgi.framework.ServicePermission "com.inspien.pilot.api.*" "get")
+} "bundle1_1"
+
+ALLOW {
+    [org.osgi.service.condpermadmin.BundleLocationCondition "file:/C:/Users/Leejh/cloud-edi/work/package-security/apache-karaf-4.2.12/deploy/*"]
+    (org.osgi.framework.ServicePermission "com.inspien.pilot.api.*" "get")
+} "COMMON_3"
+
+DENY {
+    [org.osgi.service.condpermadmin.BundleLocationCondition "file:/C:/Users/Leejh/cloud-edi/work/package-security/apache-karaf-4.2.12/deploy/*"]
+    (java.security.AllPermission "*" "*")
+} "COMMON_2"
+
+ALLOW {
+    ( java.security.AllPermission "*" "*")
+} "COMMON_1"
