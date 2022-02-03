@@ -8,9 +8,7 @@ import java.io.File;
 public class Activator implements BundleActivator {
 
     public void start(BundleContext context) throws Exception {
-        {
-            String configPath = System.getProperty("karaf.etc");
-            String policyPath = configPath + File.separator + "security.policy";
+            String policyPath = "security.policy";
             String deployPath = "C:/workspace/inspien/cloud-edi/work/package-security/apache-karaf-4.3.6/deploy";
 
             bundleSecurityManager = new BundleSecurityManager(context, policyPath, deployPath);
@@ -21,9 +19,7 @@ public class Activator implements BundleActivator {
 //                    "*", "read");
 //            bundleSecurityManager.addBundlePolicy("bnd", Arrays.asList(policy, policy2));
 //            bundleSecurityManager.removeBundlePolicy("bnd");
-        }
     }
-
     private BundleSecurityManager bundleSecurityManager;
 
     public void stop(BundleContext context) throws Exception {

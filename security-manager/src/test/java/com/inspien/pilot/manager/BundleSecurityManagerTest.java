@@ -19,6 +19,5 @@ public class BundleSecurityManagerTest {
     public void generatePolicyTest() {
 //        BundlePolicy policy = new BundlePolicy("ALLOW", "FilePermission",
 //                "config-repository/ws/pkg/*", "READ");
-
     }
 }
